@@ -8,7 +8,7 @@ height = 4.5
 hasTail = True
 
 # Output data type to screen
-Print (type(name))
-Print(type(numLegs))
-Print(type(height))
-Print(type(hasTail))
+print(type(name))
+print(type(numLegs))
+print(type(height))
+print(type(hasTail))
