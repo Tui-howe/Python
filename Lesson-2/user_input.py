@@ -7,29 +7,29 @@ string = input()
 print(string)
 
 # Taking input from the user
-# Name = input("enter your name here")
+name = input("enter your name here")
 # Output
-# Print(name)
+print(name)
 
 # Taking input from the user
-# Name = input("enter your name here: ")
+name = input("enter your name here: ")
 # Output
-# Print(name)
+print(name)
 
 # Taking input from user as integer
-# Num = int(input("Enter a number: "))
-# Add = num + 1
-# output
-# Print(add)
+num = int(input("Enter a number: "))
+add = num + 1
+# Output
+print(add)
 
 # Taking input from user as integer
-# Num = Float(input("Enter a number: "))
-# Add = num + 1
-# output
-# Print(add)
+# num = Float(input("Enter a number: "))
+# add = num + 1
+# Output
+# print(add)
 
 # Taking input from user as integer
-# Li = List(input("Enter a number: "))
-# Add = num + 1
-# output
-# Print(Li)
+# li = List(input("Enter a number: "))
+# add = num + 1
+# Output
+# print(Li)
