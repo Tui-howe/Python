@@ -1,4 +1,4 @@
-# E M Petersen
+# T M Howe
 # User input types
 
 # Taking input from user
