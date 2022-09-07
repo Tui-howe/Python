@@ -2,33 +2,33 @@
 # User input types
 
 # Taking input from user
-string = input()
+#string = input()
 # output
-print(string)
+#print(string)
 
 # Taking input from the user
-name = input("enter your name here")
+#name = input(Enter your name)
 # Output
-print(name)
+#print(name)
 
 # Taking input from the user
-name = input("enter your name here: ")
+#name = input("enter your name here: ")
 # Output
-print(name)
+#print(name)
 
 # Taking input from user as integer
-num = int(input("Enter a number: "))
+#num = int(input("Enter a number: "))
+#add = num + 1
+# Output
+#print(add)
+
+# Taking input from user as Float
+num = float(input("Enter a number: "))
 add = num + 1
 # Output
 print(add)
 
-# Taking input from user as integer
-# num = Float(input("Enter a number: "))
-# add = num + 1
-# Output
-# print(add)
-
-# Taking input from user as integer
+# Taking input from user as List
 # li = List(input("Enter a number: "))
 # add = num + 1
 # Output
