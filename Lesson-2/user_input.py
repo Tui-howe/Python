@@ -23,10 +23,10 @@
 #print(add)
 
 # Taking input from user as Float
-num = float(input("Enter a number: "))
-add = num + 1
+#num = float(input("Enter a number: "))
+#add = num + 1
 # Output
-print(add)
+#print(add)
 
 # Taking input from user as List
 # li = List(input("Enter a number: "))
