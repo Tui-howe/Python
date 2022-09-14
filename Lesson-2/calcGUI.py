@@ -1,4 +1,5 @@
 # T M Howe
+# 15/09/2022
 
 # ***************************************************
 # Python Calculator with GUI (Graphic User Interface)
@@ -7,18 +8,46 @@
 from tkinter import * # import the tkinter library
 
 def button_press(num):
-    pass
+    global equation_text
+
+    equation_text = equation_text + str(num)
+
+    equation_label.set(equation_text)
 
 def equals():
-    pass
+    global equation_text
+
+    try:
+
+        total = str(eval(equation_text))
+
+        equation_label.set(total)
+
+        equation_text = total
+
+    except SyntaxError:
+
+        equation_text.set("syntax error")
+
+        equation_text = ""
+
+    except ZeroDivisionError:
+
+        equation_label.set("Arithmetic error")
+
+        equation_text = ""
 
 def clear():
     pass
 
+
+
+
+# Designing the user interface
 window = Tk()
-window.title("Calculator Program")
+window.title("Python Calculator")
 window.geometry("500x500")
-window.configure(bg="light grey")
+window.configure(bg="#ff0000")
 
 equation_text = ""
 
@@ -56,5 +85,37 @@ button8.grid(row=2, column=1)
 
 button9 = Button(frame, text=9, height=4, width=9, font=35, command=lambda: button_press(9))
 button9.grid(row=2, column=2)
+
+button0 = Button(frame, text=0, height=4, width=9, font=35, command=lambda: button_press(0))
+button0.grid(row=3, column=0)
+
+
+# Create operation buttons
+
+plus = Button(frame, text='+', height=4, width=9, font=35, command=lambda: button_press('+'))
+plus.grid(row=0, column=3)
+
+minus = Button(frame, text='-', height=4, width=9, font=35, command=lambda: button_press('-'))
+minus.grid(row=1, column=3)
+
+multiply = Button(frame, text='*', height=4, width=9, font=35, command=lambda: button_press('*'))
+multiply.grid(row=2, column=3)
+
+divide = Button(frame, text='/', height=4, width=9, font=35, command=lambda: button_press('/'))
+divide.grid(row=3, column=3)
+
+# Create equals button
+
+equal = Button(frame, text='=', height=4, width=9, font=35, command=equals)
+equal.grid(row=3, column=2)
+
+# Create the decimal button
+decimal = Button(frame, text='.', height=4, width=9, font=35, command=lambda: button_press('.'))
+decimal.grid(row=3, column=1)
+
+# Create the clear button
+
+clear = Button(frame, text='clear', height=4, width=9, font=35, command=clear)
+clear.pack()
 
 window.mainloop()
