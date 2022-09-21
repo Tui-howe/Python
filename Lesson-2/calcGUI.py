@@ -7,17 +7,17 @@
 
 from tkinter import * # import the tkinter library
 
-def button_press(num):
+def button_press(num):   # defining each button press
     global equation_text
 
     equation_text = equation_text + str(num)
 
     equation_label.set(equation_text)
 
-def equals():
+def equals():   #this block checks for the button_press(equals)
     global equation_text
 
-    try:
+    try: #try is used in try
 
         total = str(eval(equation_text))
 
@@ -25,24 +25,24 @@ def equals():
 
         equation_text = total
 
-    except SyntaxError:
+    except SyntaxError: # chech for syntax error
 
         equation_text.set("syntax error")
 
         equation_text = ""
 
-    except ZeroDivisionError:
+    except ZeroDivisionError: # check for division by zero
 
         equation_label.set("Arithmetic error")
 
         equation_text = ""
 
-def clear():
+def clear(): # Clears the equation_label
     global equation_text
 
     equation_label.set("")
 
-    equation_text.set
+    equation_text = ""
 
 
 
@@ -119,7 +119,7 @@ decimal.grid(row=3, column=1)
 
 # Create the clear button
 
-clear = Button(frame, text='clear', height=4, width=9, font=35, command=clear)
+clear = Button(window, text='clear', height=4, width=9, font=35, command=clear)
 clear.pack()
 
 window.mainloop()
